@@ -206,5 +206,6 @@ $urlHost = $_SERVER['HTTP_HOST'];
 
 header('Access-Control-Allow-Origin: '.$urlHost);
 header('Content-type: application/json', true);
+header('Access-Control-Allow-Origin: *');
 
 echo json_encode($array);
