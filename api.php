@@ -41,7 +41,7 @@ if(!empty($url)) {
 			$data = $content[0];
 
 			if($nextSong) {
-				$nextSongName = (isset($content[2])) ? explode('-', $content[2]) : '';
+				$nextSongName = (isset($content[2])) ? explode('-', $content[2], 2) : '';
 
 				if(isset($nextSongName[1])) {
 					$array['nextSong'] = ['artist' => $nextSongName[0], 'song' => $nextSongName[1]];
@@ -66,7 +66,7 @@ if(!empty($url)) {
 				$playedSong = substr($song, 0, $cutStr);
 				
 				// Separate artist from song
-				$songData = explode('-', $playedSong);
+				$songData = explode('-', $playedSong, 2);
 				$songNameHistoric = (!empty($songData[1])) ? trim($songData[1]) : '';
 				
 				// Put in the principal array
@@ -104,7 +104,7 @@ if(!empty($url)) {
 			}
 			
 			// Separate artist from song
-			$currentSong = explode('-', $playingNow);
+			$currentSong = explode('-', $playingNow, 2);
 
 			$artist = trim($currentSong[0]);
 
