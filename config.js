@@ -12,7 +12,7 @@ var settings = {
     'radio_name': 'NoPlayer Music',
 
     // URL of streaming without / on the final, eg: http://streaming.com:8080
-    'url_streaming': 'https://stm6-ssl.painelcast.com:6934',
+    'url_streaming': 'https://ssl.painelcast.com:6926',
 
     // When choosing icecast, make sure the file 'player.log' in the document root is writeable.
     // Choose between 'shoutcast' or 'icecast'
